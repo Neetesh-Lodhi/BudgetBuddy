@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+💰 BudgetBuddy – Personal Finance Manager
+BudgetBuddy is a full-stack web application designed to help users take control of their financial health. From tracking daily expenses to visualizing long-term spending habits, BudgetBuddy provides the tools necessary for smarter budgeting and financial clarity.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Key Features
+Transaction Management: Full CRUD (Create, Read, Update, Delete) functionality for income and expenses.
 
-## Available Scripts
+Smart Categorization: Organize spending by categories (e.g., Food, Rent, Entertainment) for better insights.
 
-In the project directory, you can run:
+Budgeting & Alerts: Set monthly limits for specific categories and receive visual alerts when approaching or exceeding them.
 
-### `npm start`
+Data Visualization: Interactive charts and graphs to visualize spending patterns over time.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Recurring Transactions: Automate the logging of subscriptions or monthly bills.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Export Reports: Download your financial data in CSV or PDF formats for offline review.
 
-### `npm test`
+Responsive Design: Fully optimized for both desktop and mobile viewing.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ Tech Stack
+Frontend
+React.js: For building a dynamic and responsive UI.
 
-### `npm run build`
+Redux / Context API: State management for user data and transactions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Chart.js / Recharts: Powering the financial analytics and visualizations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tailwind CSS: For modern, sleek styling.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Backend
+Node.js & Express.js: Scalable server-side architecture.
 
-### `npm run eject`
+MongoDB: NoSQL database for flexible data storage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JSON Web Tokens (JWT): Secure user authentication and authorization.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Mongoose: Elegant MongoDB object modeling for Node.js.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🏗️ Architecture
+The application follows a standard MERN architecture:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Client: React frontend communicates with the API via Axios.
 
-## Learn More
+Server: Express handles routing, middleware, and business logic.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Database: MongoDB stores user profiles, transaction history, and budget settings.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Auth: Secured using bcrypt for password hashing and JWT for session management.
 
-### Code Splitting
+⚙️ Installation & Setup
+Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Bash
+git clone https://github.com/your-username/budgetbuddy.git
+cd budgetbuddy
+Install dependencies:
 
-### Analyzing the Bundle Size
+For the Backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Bash
+cd server
+npm install
+For the Frontend:
 
-### Making a Progressive Web App
+Bash
+cd ../client
+npm install
+Environment Variables:
+Create a .env file in the server directory and add:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Code snippet
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+Run the application:
 
-### Advanced Configuration
+Start the server: npm run dev (from server folder)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start the client: npm start (from client folder)
 
-### Deployment
+📈 Future Improvements
+Bank Integration: Connect to real-time bank feeds via Plaid API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+AI Insights: Use machine learning to suggest budget optimizations based on spending history.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Multi-Currency Support: For international users tracking global expenses.
