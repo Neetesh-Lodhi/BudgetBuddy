@@ -1,68 +1,136 @@
-<img src="https://cdn-icons-png.flaticon.com/512/2845/2845705.png" width="32">  
-# BudgetBuddy – Finance Manager
+
+# 📡 Inventory Buddy – API & Documentation
 
 <p align="left">
   <img src="https://img.shields.io/badge/MERN-Stack-00ff00?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Maintained%3F-yes-007acc?style=for-the-badge&logo=github" />
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Maintained%3F-yes-007acc?style=for-the-badge&logo=github" />
 </p>
 
 ---
 
-## 📌 Overview
-**BudgetBuddy** is an end-to-end financial ecosystem built to bridge the gap between spending and saving.  
-It empowers users with real-time tracking, automated budget alerts, and professional-grade reporting.
+## 🔐 Authentication
+
+| Method | Endpoint            | Description              |
+|--------|---------------------|--------------------------|
+| POST   | `/api/auth/signup`  | Register new user        |
+| POST   | `/api/auth/login`   | Login user & return JWT  |
 
 ---
 
-## 🌟 Key Features
+## 📦 Product Management
 
-| Feature              | Capabilities                                                                 |
-|----------------------|-------------------------------------------------------------------------------|
-| 💳 Transaction CRUD  | Effortlessly manage income/expenses with category tagging.                    |
-| 📊 Smart Analytics   | Interactive charts and monthly spending heatmaps.                            |
-| ⚠️ Budget Guards     | Set monthly thresholds; receive visual alerts on overspending.                |
-| 🔄 Auto-Log          | Automate recurring bills and subscriptions.                                   |
-| 📄 Professional Reports | One-click exports to PDF and CSV for tax or audit purposes.               |
-
----
-
-## 🛠️ Tech Stack & Tools
-
-<details open>
-<summary><b>View Implementation Details</b></summary>
-
-**Frontend**
-- React.js (Hooks)  
-- Redux Toolkit  
-- Tailwind CSS  
-- Chart.js  
-- Axios  
-
-**Backend**
-- Node.js  
-- Express.js  
-- Mongoose  
-- JWT & Bcrypt  
-
-**Infrastructure**
-- MongoDB Atlas  
-- Vercel / Render  
-- Postman / Compass  
-
-</details>
+| Method | Endpoint               | Description        |
+|--------|------------------------|--------------------|
+| GET    | `/api/products`        | Fetch all products |
+| POST   | `/api/products`        | Add new product    |
+| PUT    | `/api/products/:id`    | Update product     |
+| DELETE | `/api/products/:id`    | Delete product     |
 
 ---
 
-## 🏗️ Architecture & Folder Structure
+## 📊 Dashboard
 
-```plaintext
-📁 budgetbuddy-root
- ├── 📂 client            # Frontend (React + Vite/CRA)
- │    ├── 📂 src/hooks    # Custom Logic
- │    └── 📂 src/store    # Redux State Management
- ├── 📂 server            # Backend (Node + Express)
- │    ├── 📂 models       # Mongoose Data Schemas
- │    ├── 📂 middleware   # Auth Guards & Error Handling
- │    └── 📂 routes       # API Endpoints
- └── 📄 .env.example      # Environment Configuration
+| Method | Endpoint                   | Description              |
+|--------|----------------------------|--------------------------|
+| GET    | `/api/products/dashboard`  | Get inventory statistics |
+
+---
+
+## 💳 Payments
+
+| Method | Endpoint                          | Description                  |
+|--------|-----------------------------------|------------------------------|
+| POST   | `/api/payment/create-checkout-session` | Create Stripe checkout |
+| GET    | `/payment-success`                | Payment success redirect     |
+
+---
+
+## 📄 Reports
+
+| Method | Endpoint            | Description        |
+|--------|---------------------|--------------------|
+| GET    | `/api/reports/csv`  | Export CSV report  |
+| GET    | `/api/reports/pdf`  | Export PDF report  |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/yourusername/inventory-buddy.git
+cd inventory-buddy
+2️⃣ Install Dependencies
+Frontend
+
+bash
+cd client
+npm install
+Backend
+
+bash
+cd server
+npm install
+3️⃣ Setup Environment Variables
+Create .env file inside server:
+
+env
+PORT=5000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
+STRIPE_SECRET_KEY=your_stripe_secret
+4️⃣ Run Backend
+bash
+npm run dev
+Server runs on: http://localhost:5000
+
+5️⃣ Run Frontend
+bash
+cd client
+npm start
+Frontend runs on: http://localhost:3000
+
+🌐 Deployment
+Inventory Buddy can be deployed easily using cloud platforms:
+
+Service	Purpose
+Vercel	Frontend Deployment
+Render	Backend API Hosting
+MongoDB Atlas	Cloud Database
+Production Architecture:
+
+Code
+React Frontend (Vercel)
+        │
+        ▼
+Node.js Backend (Render)
+        │
+        ▼
+MongoDB Atlas
+📊 Project Highlights
+✔ Full MERN stack implementation
+✔ Authentication with JWT
+✔ Inventory management system
+✔ Real-time dashboard analytics
+✔ Stripe payment integration
+✔ Export reports (PDF / CSV)
+✔ AI assistant support
+✔ Modern Tailwind UI dashboard
+
+🎯 Future Improvements
+Planned features for next versions:
+
+📱 Mobile responsive UI improvements
+
+🔔 Real-time stock notifications
+
+🏢 Multi-warehouse support
+
+📊 Advanced analytics & forecasting
+
+🤖 AI-powered demand prediction
+
+🤝 Contributing
+Contributions are welcome!
+Workflow: fork → clone → create branch → commit → pull request
